@@ -2,14 +2,12 @@ import java.util.Scanner;
 
 
 public class RomanoParaInt {
-
           
 
     public static int AlgarismoRomanoParaInteiro(String s) {
         if (s == null || s.trim().isEmpty()) {
             return 0;
         }
-
      
         s = s.trim().toUpperCase();
 
@@ -36,7 +34,6 @@ public class RomanoParaInt {
         return total;
     }
 
-
     private static int valorRomano(char caractere) {
         switch (caractere) {
             case 'I':
@@ -60,7 +57,6 @@ public class RomanoParaInt {
 
 
     public static void main(String[] args) {
-        // Entrada via argumento no terminal
         if (args.length > 0) {
             String algarismos = String.join("", args);
             int valor = AlgarismoRomanoParaInteiro(algarismos);
@@ -68,7 +64,6 @@ public class RomanoParaInt {
             return;
         }
 
-    
         Scanner sc = new Scanner(System.in);
         System.out.print("Informe o algarismo: ");
         String algarismos = sc.nextLine();
